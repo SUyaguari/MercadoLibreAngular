@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,9 +10,14 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'MercadoLibre';
   a: number = 1;
-  constructor(public translate: TranslateService){
+  cont: number =1;
+  constructor(public translate: TranslateService, private router: Router){
     this.translate.addLangs(['en','es']);
     this.translate.setDefaultLang('es');
+    if(this.cont==1){
+        this.router.navigate(['principal']);
+        this.cont=this.cont+1;
+    }
   }
 
   cambiar(){

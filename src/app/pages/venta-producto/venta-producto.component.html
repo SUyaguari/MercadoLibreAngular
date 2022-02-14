@@ -1,5 +1,5 @@
 <h2 class="text-dark font-weight-bold mb-2"> {{"Productos" | translate}}  </h2>
-<h2>aaaaaaaaaaaaaaaaaaaaaaa</h2>
+<h3>{{prod.nombre}}</h3>
 <p class="font-weight-light"> {{"Su producto seleccionado :)" | translate}}</p>
 <div class="container">
     <div class="row">
@@ -45,6 +45,13 @@
                 <br>
                 <button class="btn btn-primary mr-2">{{"Hola" | translate}}</button>
             </form>
+        </div>
+        <div class="col-1">
+            
+        </div>
+        <div class="col-1">
+            <label for="txtCantidad">{{"Vendedor" | translate}}</label>
+            <button class="btn btn-info mr-2" (click)="usuario()">{{"Visitar perfil" | translate}}</button>
         </div>
     </div>
 </div>

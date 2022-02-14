@@ -46,4 +46,10 @@ export class VentaProductoComponent implements OnInit {
     }
   }
 
+  usuario(){
+
+    this.router.navigate(['perfil']);
+
+  }
+
 }

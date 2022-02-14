@@ -18,5 +18,20 @@
     "Su producto seleccionado :)": "Su producto seleccionado :)",
     "Cantidad": "Cantidad",
     "Hola": "Hola",
-    "cambiar":"Cambiar idioma"
+    "cambiar":"Cambiar idioma",
+    "Cargar Imagen": "Cargar Imagen",
+    "Codigo": "Codigo",
+    "Precio": "Precio",
+    "Descripcion": "Descripcion",
+    "Guardar": "Guardar",
+    "Productos destacados": "Productos destacados",
+    "Lista de todos los productos": "Lista de todos los productos",
+    "Vendedor": "Vendedor:",
+    "Visitar perfil": "Visitar perfil",
+    "Perfil": "Perfil",
+    "Perfil de usuario": "Perfil de usuario",
+    "Cedula": "Cedula",
+    "Celular": "Celular",
+    "Regresar": "Regresar"
+
 }

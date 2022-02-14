@@ -1,0 +1,46 @@
+<h4 class="card-title">{{"Perfil" | translate}}</h4>
+<p class="card-description"> {{"Perfil de usuario" | translate}}</p>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/Imagenes/perfildeusuario.jpg" width="400" height="450" class="img-fluid" alt="perfildeusuario.jpg" />
+            <hr>
+        </div>
+        <div class="col">
+            <form class="forms-sample">
+                <div class="form-group row">
+                    <label for="txtCedula" class="col-sm-2 col-form-label">{{"Cedula" | translate}}</label>
+                    <div class="col-sm-6">
+                        <output class="form-control" value="#{clientesBean.cedula}" id="txtCedula">a</output>
+                    </div>
+
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label for="txtNombre" class="col-sm-2 col-form-label">{{"Nombre" | translate }}</label>
+                    <div class="col-sm-6">
+                        <output class="form-control" id="txtNombre">a</output>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label for="txtCelular" class="col-sm-2 col-form-label">{{"Celular" | translate}}</label>
+                    <div class="col-sm-6">
+                        <output class="form-control" value="#{clientesBean.celular}" id="txtCelular"> a</output>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label for="txtCorreo" class="col-sm-2 col-form-label">{{"Correo" | translate}}</label>
+                    <div class="col-sm-6">
+                        <output class="form-control" value="#{clientesBean.correo}" id="txtCorreo">a</output>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary mr-2" (click)="regresar()">{{"Regresar" | translate}}</button>
+            </form>
+
+        </div>
+    </div>
+</div>

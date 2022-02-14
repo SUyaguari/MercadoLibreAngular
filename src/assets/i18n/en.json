@@ -18,5 +18,19 @@
     "Su producto seleccionado :)": "Your selected product :)",
     "Cantidad": "Quantity",
     "Hola": "Hello",
-    "cambiar": "Change language"
+    "cambiar": "Change language",
+    "Cargar Imagen": "Load Image",
+    "Codigo": "Code",
+    "Precio": "Price",
+    "Descripcion": "Description",
+    "Guardar": "Save",
+    "Productos destacados": "Featured Products",
+    "Lista de todos los productos": "List of all products",
+    "Vendedor": "Seller:",
+    "Visitar perfil": "visit profile",
+    "Perfil": "Profile",
+    "Perfil de usuario": "User profile",
+    "Cedula": "No. Identification card",
+    "Celular": "Phone",
+    "Regresar": "Return"
 }   

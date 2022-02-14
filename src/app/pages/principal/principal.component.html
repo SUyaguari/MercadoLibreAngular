@@ -2,6 +2,7 @@
 <p>{{"productos segun sun necesidad" | translate}} </p >
 <p-carousel [value]="g" [numVisible]="3" [numScroll]="3" [circular]="false" [autoplayInterval]="3000"  [responsiveOptions]="responsiveOptions">
     <ng-template pTemplate="header">
+        <h3>{{"Productos destacados" | translate}}</h3>
     </ng-template>
     <ng-template let-product pTemplate="item" class="slider">
         <div class="product-item">
@@ -28,7 +29,8 @@
 </p-carousel>
 
 <hr>
- 
+ <h2>{{"Lista de todos los productos" | translate}}</h2>
+ <hr>
   <br>
   <ul>
     <li *ngFor="let imagen of g" class="lista">
