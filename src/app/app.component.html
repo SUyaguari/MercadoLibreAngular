@@ -9,14 +9,15 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <link rel="shortcut icon" href="MercadoLibre\src\assets\assets\images\favicon.png"/>
-    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </head>
     <body>
         
       <div class="container-scroller">
       
            <img src="assets/Imagenes/MercadoLibre.png" width="200" height="45" alt="ImagenMercadoLibre" />
-          </div>
+           <button (click)="cambiar()" class="btn btn-secondary"> {{"cambiar" | translate}}</button>
+      </div>
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
           <!-- partial:../../partials/_sidebar.html -->
@@ -51,8 +52,7 @@
               <div class="footer-inner-wraper">
                 <div class="d-sm-flex justify-content-center justify-content-sm-between">
                   <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © cjaponc@ieee.org 2022</span>
-                  <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Proyecto <a href="https://www.ups.edu.ec/" target="_blank">Porgrmacion de plataformas web G1</a> Itegrantes: Chsirtian Japon
-                  Daniel Lopez Sebastian Uyaguari</span>
+                  <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> {{"proyecto" | translate }} <a href="https://www.ups.edu.ec/" target="_blank">{{"Progrmacion de plataformas web G1" | translate}}</a>{{"integrantes" | translate}}</span>
                 </div>
               </div>
             </footer>
@@ -75,7 +75,8 @@
       <!-- endinject -->
       <!-- Custom js for this page -->
       <!-- End custom js for this page -->
-  
+      
+     
     </body>
 </html>
 

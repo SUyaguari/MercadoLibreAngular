@@ -24,6 +24,7 @@ export class FormularioComponent implements OnInit {
     this.formularioServicio.guardar(this.form).subscribe(data => {
       console.log(data);
     });
+    this.form = new Formulario;
   }
 
 }

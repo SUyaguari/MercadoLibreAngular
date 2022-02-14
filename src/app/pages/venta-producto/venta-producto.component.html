@@ -1,0 +1,53 @@
+<h2 class="text-dark font-weight-bold mb-2"> {{"Productos" | translate}}  </h2>
+<h2>aaaaaaaaaaaaaaaaaaaaaaa</h2>
+<p class="font-weight-light"> {{"Su producto seleccionado :)" | translate}}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-1">
+
+        </div>
+        <div class="col-4">
+            <img src={{prod.imagen}} class="img-fluid" alt={{prod.nombre}} />
+        </div>
+        <div class="col-4">
+            <form class="forms-sample">
+
+
+                <div class="form-group">
+                    <label for="txtNombre">{{"Nombre" | translate}}</label>
+                    <output class="form-control" id="txtNombre">{{prod.nombre}}</output>
+                </div>
+
+                <div class="form-group">
+                    <label for="txtCorreo">{{"Correo" | translate}}</label>
+                    <output class="form-control" id="txtCorreo">{{prod.imagen}}</output>
+                </div>
+
+                <div class="form-group">
+                    <label for="txtTexto">{{"Texto" | translate}}</label>
+                    <output class="form-control">{{prod.nombre}}</output>
+
+                </div>
+
+
+                <div class="form-grup">
+                    <label for="txtCantidad">{{"Cantidad" | translate}}</label>
+                    <div class="input-group quantity mr-3" style="width: 130px;">
+                        <div class="input-group-btn">
+                            <button (click)="restar()" class="btn btn-primary btn-minus">-</button>
+                        </div>
+                        <input type="text" class="form-control text-center" value={{cont}}>
+                        <div class="input-group-btn">
+                            <button (click)="sumar()" class="btn btn-primary btn-plus">+</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-primary mr-2">{{"Hola" | translate}}</button>
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+
+<p>kuchaao</p>
