@@ -16,6 +16,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { environment } from 'src/environments/environment';
 import { RegistarproductoComponent } from './pages/registarproducto/registarproducto.component';
 import { PersonaPerfilComponent } from './pages/persona-perfil/persona-perfil.component';
+import { FormulariosListarComponent } from './pages/formularios-listar/formularios-listar.component';
 
 
 
@@ -27,6 +28,7 @@ import { PersonaPerfilComponent } from './pages/persona-perfil/persona-perfil.co
     VentaProductoComponent,
     RegistarproductoComponent,
     PersonaPerfilComponent,
+    FormulariosListarComponent,
   ],
   imports: [
     BrowserModule,

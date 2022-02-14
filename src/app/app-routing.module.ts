@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { FormulariosListarComponent } from './pages/formularios-listar/formularios-listar.component';
 import { PersonaPerfilComponent } from './pages/persona-perfil/persona-perfil.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { RegistarproductoComponent } from './pages/registarproducto/registarproducto.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: "principal", component: PrincipalComponent},
   {path: "compraProducto", component: VentaProductoComponent},
   {path: "crearProducto", component: RegistarproductoComponent},
-  {path: "perfil", component:PersonaPerfilComponent}
+  {path: "perfil", component:PersonaPerfilComponent},
+  {path: "listarFormularios", component: FormulariosListarComponent}
 ];
 
 @NgModule({

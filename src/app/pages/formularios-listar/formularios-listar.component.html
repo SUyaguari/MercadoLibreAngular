@@ -1,0 +1,28 @@
+<h2>{{"Listado de formularios" | translate}}</h2>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">{{"Nombre" | translate}}</th>
+          <th scope="col">{{"Correo" | translate}}</th>
+          <th scope="col">{{"Texto" | translate}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+            <tr *ngFor="let c of formularios | async ">
+                <th scope="row">{{c.id}}</th>
+                
+                <td>{{c.nombre}}</td>
+
+                <td>{{c.correo}}</td>
+                
+                <td>{{c.texto}}</td>
+            </tr>
+
+        
+      </tbody>
+
+
+</table>
