@@ -1,0 +1,36 @@
+<div class="centrado">
+    <h2>Cargar Imagen</h2>
+     
+    <form class ="forms-sample">
+    	
+   		
+    <div class="form-group">
+      <label for="txtCodigo">Codigo </label>
+            <input class="form-control" type="text" id="txtCodigo" [(ngModel)]="form.codigo">
+    </div>
+    
+    <div class="form-group">
+       <label for="txtNombre"> </label>
+          <input class="form-control" type="text" [(ngModel)]="form.nombre" id="txtNombre"/>
+    </div>
+    
+    <div class="form-group">
+      <label for="txtPrecio"> </label>
+      <input class="form-control" type="text" [(ngModel)]="form.precio" id="txtPrecio"/>
+    </div>
+
+    <div class="form-group">
+        <label for="txtDescripcion"> </label>
+        <input class="form-control" type="text" [(ngModel)]="form.descripcion" id="txtDescripcion"/>
+      </div>
+
+      <div class="form-group">
+        <label for="txtCantidad"> </label>
+        <input class="form-control" type="text" [(ngModel)]="form.cantidad" id="txtCantidad"/>
+      </div>
+
+     <input type="file"  (change)="cambioArchivo($event)" />
+     <button (click)="guardar()">Guardar</button>
+     </form>
+</div>
+

@@ -11,6 +11,11 @@ import {CarouselModule} from 'primeng/carousel';
 import { VentaProductoComponent } from './pages/venta-producto/venta-producto.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AngularFireModule }  from '@angular/fire/compat';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { environment } from 'src/environments/environment';
+import { RegistarproductoComponent } from './pages/registarproducto/registarproducto.component';
+
 
 
 @NgModule({
@@ -19,12 +24,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     FormularioComponent,
     PrincipalComponent,
     VentaProductoComponent,
+    RegistarproductoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     HttpClientModule,
+    AngularFireModule,
     CarouselModule,
     TranslateModule.forRoot({
       loader: {
