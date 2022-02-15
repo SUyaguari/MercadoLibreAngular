@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { Contactows } from 'src/app/domain/contactows';
 import { producto } from 'src/app/domain/productos';
 import { ProductosServicioService } from 'src/app/service/productos-servicio.service';
 
@@ -16,6 +17,7 @@ export class PrincipalComponent implements OnInit {
   
   vector:producto[]=[];
 
+  user: any;
   constructor(private http: HttpClient, private router: Router, private productoService: ProductosServicioService) { 
 
       this.responsiveOptions = [
@@ -63,6 +65,10 @@ export class PrincipalComponent implements OnInit {
 
     this.productoService.getProducto().subscribe((res: any[]) => this.g = res);
 
+  }
+
+  colocarUser(u: Contactows){
+    this.user = u;
   }
 
 }

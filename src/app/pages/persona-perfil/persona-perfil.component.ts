@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { autentificacion } from 'src/app/domain/singleton';
 
 @Component({
   selector: 'app-persona-perfil',
@@ -8,9 +9,12 @@ import { Router } from '@angular/router';
 })
 export class PersonaPerfilComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private aut : autentificacion ) { }
+
+  per : any;
 
   ngOnInit(): void {
+    this.per = this.aut.getUsuario();
   }
 
   regresar(){

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { autentificacion } from 'src/app/domain/singleton';
 import { ventas } from 'src/app/domain/ventas';
 import { VentasServiceService } from 'src/app/service/ventas-service.service';
 
@@ -15,8 +16,9 @@ export class VentaProductoComponent implements OnInit {
   total: number = 0 ;
   p: number = 0;
   v: ventas = new ventas();
+  per: any;
 
-  constructor(private route: ActivatedRoute, private router: Router, private servicioVentas: VentasServiceService) {
+  constructor(private route: ActivatedRoute, private router: Router, private servicioVentas: VentasServiceService, private aut: autentificacion) {
 
     
     this.route.queryParams.subscribe(params =>{
@@ -34,7 +36,7 @@ export class VentaProductoComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.prod);
-
+    this.per = this.aut.getUsuario();
   }
 
   sumar(){
@@ -63,7 +65,7 @@ export class VentaProductoComponent implements OnInit {
     this.v.codigoProducto=this.prod.codigo;
     this.v.cantidad = this.cont;
     this.v.total = this.total;
-    this.v.comprador ='010106040173';
+    this.v.comprador =this.per.cedula;
     this.v.vendedor ='000000000';
     this.servicioVentas.guardar(this.v).subscribe(data => {
       console.log(data);

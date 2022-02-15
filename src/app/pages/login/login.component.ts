@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Contactows } from 'src/app/domain/contactows';
 import { Loginws } from 'src/app/domain/login';
+import { autentificacion } from 'src/app/domain/singleton';
 import { ContactowsService } from 'src/app/service/contactows.service';
+import { PrincipalComponent } from '../principal/principal.component';
 
 
 @Component({
@@ -21,7 +24,7 @@ export class LoginComponent implements OnInit {
   
   c: any;
 
-  constructor(private contactoService: ContactowsService ) { }
+  constructor(private contactoService: ContactowsService, private roueter: Router, private aut : autentificacion) { }
 
   ngOnInit(): void {
 
@@ -40,7 +43,13 @@ export class LoginComponent implements OnInit {
     console.log("-------------");
 
    //this.contactos = this.contactoService.getClientes();
-   console.log("tuptamadre")
+    if(this.c!=null){
+      //this.pantallaPrincipal.colocarUser(this.c);
+      this.aut.setUsuario(this.c);
+      this.roueter.navigate(['principal']);
+      
+    }
+   
   // console.log(this.contactos);
     /*
 /*

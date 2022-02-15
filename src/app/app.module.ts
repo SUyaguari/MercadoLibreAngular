@@ -19,6 +19,7 @@ import { PersonaPerfilComponent } from './pages/persona-perfil/persona-perfil.co
 import { FormulariosListarComponent } from './pages/formularios-listar/formularios-listar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ListadoComponent } from './pages/listado/listado.component';
+import { autentificacion } from './domain/singleton';
 
 
 
@@ -52,7 +53,7 @@ import { ListadoComponent } from './pages/listado/listado.component';
       }
     })
   ],
-  providers: [],
+  providers: [autentificacion],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

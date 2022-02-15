@@ -6,6 +6,7 @@ import "firebase/compat/firestore" ;
 import { Router } from '@angular/router';
 import { Crearproducto } from 'src/app/domain/crearproducto';
 import { ProductosServicioService } from 'src/app/service/productos-servicio.service';
+import { PrincipalComponent } from '../principal/principal.component';
 
 
 
@@ -56,6 +57,7 @@ guardar(){
   this.servicioProducto.guardar(this.form).subscribe(data =>{
     console.log(data)
   })
+
 
 
 }
