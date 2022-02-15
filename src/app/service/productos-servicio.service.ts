@@ -18,7 +18,7 @@ export class ProductosServicioService {
   }
 
   getProducto() {
-    let url = "http://localhost:8080/proyectoFinal/ws/productosRest";
+    let url = "http://localhost:8080/proyectoFinal/ws/productosRest/listarProductos";
     return this.http.get<any>(url);
   }
 
