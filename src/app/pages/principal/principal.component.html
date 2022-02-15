@@ -1,5 +1,52 @@
 <h2>{{"Mercado" | translate}} </h2>
 <p>{{"productos segun sun necesidad" | translate}} </p >
+<br>
+
+<head>
+    <title>Barra de navegación horizontal con listas y estilos CSS</title>
+    
+    <style type="text/css">
+    #navegador ul{
+       list-style-type: none;
+       text-align: right;
+    }
+    #navegador li{
+       display: inline;
+       text-align: right;
+       margin: 0 10px 0 0;
+    }
+    #navegador li a {
+       padding: 2px 7px 2px 7px;
+       color: #666;
+       background-color: #eeeeee;
+       border: 1px solid #ccc;
+       text-decoration: none;
+    }
+    #navegador li a:hover{
+       background-color: #333333;
+       color: #ffffff;
+    }
+       </style>
+    </head>
+    
+    <body>
+    
+    
+    <div id="navegador">
+    <ul>
+    <h6>Mi Primer Chat bot</h6>
+    <hr>
+    <li><a href="formulario">Formulario</a></li>
+    <li><a href="#">Elemento 2</a></li>
+    <li><a href="#">Elemento 3</a></li>
+    <li><a href="#">Elemento 4</a></li>
+    <hr>
+    </ul>
+    </div>
+    
+    </body>
+
+<br>
 <p-carousel [value]="g" [numVisible]="3" [numScroll]="3" [circular]="false" [autoplayInterval]="3000"  [responsiveOptions]="responsiveOptions">
     <ng-template pTemplate="header">
         <h3>{{"Productos destacados" | translate}}</h3>
@@ -28,6 +75,7 @@
     </div>
 </p-carousel>
 
+
 <hr>
  <h2>{{"Lista de todos los productos" | translate}}</h2>
  <hr>
@@ -44,8 +92,9 @@
             </div>
           </div>
         
-        </li>
+     </li>
 </ul>
 
+<hr>
 
-  
+ 

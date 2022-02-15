@@ -53,6 +53,11 @@ guardar(){
   console.log("ya")
   console.log(this.servicioProducto.guardar(this.form));
   
+  this.servicioProducto.guardar(this.form).subscribe(data =>{
+    console.log(data)
+  })
+
+
 }
 
 

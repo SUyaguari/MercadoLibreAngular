@@ -11,14 +11,16 @@ export class ProductosServicioService {
 
   guardar(prodicto: Crearproducto){
     
-    let url = "http://localhost:8080/proyectoFinal/ws/productosRest/productoC";
+    let url = "http://localhost:8080/proyectoFinal/ws/productosRest";
     console.log("super", prodicto);
     return this.http.post<any>(url, prodicto);
 
   }
 
-  getVenta() {
+  getProducto() {
     let url = "http://localhost:8080/proyectoFinal/ws/productosRest";
     return this.http.get<any>(url);
   }
+
+
 }
