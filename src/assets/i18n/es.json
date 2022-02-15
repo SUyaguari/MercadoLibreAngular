@@ -18,7 +18,7 @@
     "Su producto seleccionado :)": "Su producto seleccionado :)",
     "Cantidad": "Cantidad",
     "Hola": "Hola",
-    "cambiar":"Cambiar idioma",
+    "cambiar":"Change language",
     "Cargar Imagen": "Cargar Imagen",
     "Codigo": "Codigo",
     "Precio": "Precio",
@@ -33,6 +33,14 @@
     "Cedula": "Cedula",
     "Celular": "Celular",
     "Regresar": "Regresar",
-    "Listado de formularios": "Listado de formularios"
-
+    "Listado de formularios": "Listado de formularios",
+    "Total": "Total",
+    "iniciarSesion": "Iniciar Sesion",
+    "Contraseña": "Contraseña",
+    "Registro": "Registro",
+    "Sistema de Registro": "Sistema de Registro",
+    "Usuario": "Usuario",
+    "Refresh": "Refrescar",
+    "Casa": "Principal",
+    "Formularios": "Formularios"
 }

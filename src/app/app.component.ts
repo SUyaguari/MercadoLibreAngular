@@ -14,10 +14,7 @@ export class AppComponent {
   constructor(public translate: TranslateService, private router: Router){
     this.translate.addLangs(['en','es']);
     this.translate.setDefaultLang('es');
-    if(this.cont==1){
-        //this.router.navigate(['principal']);
-        this.cont=this.cont+1;
-    }
+    
   }
 
   cambiar(){
@@ -29,7 +26,17 @@ export class AppComponent {
       this.translate.setDefaultLang('es')
       this.a=1;
     }
-    
+  }
 
+  sesion(){
+    this.router.navigate(['login']);
+  }
+
+  casa(){
+    this.router.navigate(['principal']);
+  }
+
+  formulario(){
+    this.router.navigate(['formulario']);
   }
 }

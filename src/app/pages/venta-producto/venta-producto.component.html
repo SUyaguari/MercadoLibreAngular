@@ -7,7 +7,7 @@
 
         </div>
         <div class="col-4">
-            <img src={{prod.imagen}} class="img-fluid" alt={{prod.nombre}} />
+            <img src={{prod.photo}} class="img-fluid" alt={{prod.nombre}} />
         </div>
         <div class="col-4">
             <form class="forms-sample">
@@ -19,13 +19,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="txtCorreo">{{"Correo" | translate}}</label>
-                    <output class="form-control" id="txtCorreo">{{prod.imagen}}</output>
+                    <label for="txtCorreo">{{"Descripcion" | translate}}</label>
+                    <output class="form-control" id="txtCorreo">{{prod.descripcion}}</output>
                 </div>
 
                 <div class="form-group">
-                    <label for="txtTexto">{{"Texto" | translate}}</label>
-                    <output class="form-control">{{prod.nombre}}</output>
+                    <label for="txtTexto">{{"Precio" | translate}}</label>
+                    <output class="form-control">{{prod.precio}}</output>
 
                 </div>
 
@@ -43,18 +43,22 @@
                     </div>
                 </div>
                 <br>
-                <button class="btn btn-primary mr-2">{{"Hola" | translate}}</button>
+                <button class="btn btn-primary mr-2" (click)="guardar()" >{{"Comprar" | translate}}</button>
             </form>
         </div>
         <div class="col-1">
-            
+
         </div>
-        <div class="col-1">
+        <div class="col-2">
+                <div class="form-group">
+                    <label for="txtTexto">{{"Total" | translate}}:</label>
+                    <output class="form-control">{{total}}</output>
+                </div>
+                <br>
             <label for="txtCantidad">{{"Vendedor" | translate}}</label>
-            <button class="btn btn-info mr-2" (click)="usuario()">{{"Visitar perfil" | translate}}</button>
+            <br>
+            <button class="btn btn-info btn-lg" (click)="usuario()">{{"Visitar perfil" | translate}}</button>
         </div>
     </div>
 </div>
 <br />
-
-<p>kuchaao</p>
