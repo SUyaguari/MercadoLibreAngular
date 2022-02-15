@@ -17,6 +17,8 @@ import { environment } from 'src/environments/environment';
 import { RegistarproductoComponent } from './pages/registarproducto/registarproducto.component';
 import { PersonaPerfilComponent } from './pages/persona-perfil/persona-perfil.component';
 import { FormulariosListarComponent } from './pages/formularios-listar/formularios-listar.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ListadoComponent } from './pages/listado/listado.component';
 
 
 
@@ -29,6 +31,8 @@ import { FormulariosListarComponent } from './pages/formularios-listar/formulari
     RegistarproductoComponent,
     PersonaPerfilComponent,
     FormulariosListarComponent,
+    ListadoComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,8 @@ import { PersonaPerfilComponent } from './pages/persona-perfil/persona-perfil.co
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { RegistarproductoComponent } from './pages/registarproducto/registarproducto.component';
 import { VentaProductoComponent } from './pages/venta-producto/venta-producto.component';
+import { ListadoComponent } from './pages/listado/listado.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {path: "formulario", component: FormularioComponent},
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path: "compraProducto", component: VentaProductoComponent},
   {path: "crearProducto", component: RegistarproductoComponent},
   {path: "perfil", component:PersonaPerfilComponent},
-  {path: "listarFormularios", component: FormulariosListarComponent}
+  {path: "listarFormularios", component: FormulariosListarComponent},
+  {path: "registro",component: ListadoComponent},
+  {path: "login", component: LoginComponent}
 ];
 
 @NgModule({

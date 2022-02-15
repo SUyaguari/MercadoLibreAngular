@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <form class="login">
+      <p class="title">Log in</p>
+
+      <input type="text" placeholder="correo" 
+      id="txtEmail" name="txtEmail" type="email"  [(ngModel)]="datos.correo" autofocus/>
+      <i class="fa fa-user"></i>
+
+      <input type="text" placeholder="Cedula" 
+      id="txtNombre" name="txtNombre"  type="text"  [(ngModel)]="datos.cedula" autofocus/>
+      <i class="fa fa-user"></i>
+
+      <button (click)="cargarClientes()">Guardar</button>
+
+    </form>
+    <footer><a target="blank" href="http://boudra.me/">boudra.me</a></footer>
+
+  </div>

@@ -10,9 +10,10 @@ import { producto } from 'src/app/domain/productos';
 })
 export class PrincipalComponent implements OnInit {
 
-  responsiveOptions: any;
+  responsiveOptions: any; 
+  imagenes: any;
   g:any;
-  
+  parametro: any;
   
   vector:producto[]=[];
 
@@ -41,12 +42,12 @@ export class PrincipalComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.g =[{codigo:0, nombre:'Gato', precio:'1.20', descripcion: 'wuehfiwehfw', cantidad:'199', photo:"assets/Imagenes/hamster.png"},
-    {codigo:1, nombre:'Gato1', precio:'1.201', descripcion: 'wuehfiwehfw1', cantidad:'1991', photo:"assets/Imagenes/gatito.png"},
-    {codigo:2, nombre:'Gato2', precio:'1.202', descripcion: 'wuehfiwehfw2', cantidad:'1992', photo:"assets/Imagenes/hamster.png"},
-    {codigo:3, nombre:'Gato3', precio:'1.203', descripcion: 'wuehfiwehfw3', cantidad:'1993', photo:"assets/Imagenes/gato3.png"},
-    {codigo:4, nombre:'Gato4', precio:'1.204', descripcion: 'wuehfiwehfw4', cantidad:'1994', photo:"assets/Imagenes/gatito.png"},
-    {codigo:5, nombre:'Gato5', precio:'1.205', descripcion: 'wuehfiwehfw5', cantidad:'1995', photo:"assets/Imagenes/gato3.png"}
+    this.g =[{codigo:0, nombre:'Gato', imagen:"assets/Imagenes/hamster.png"},
+    {codigo:1, nombre:'Gato2', imagen:'assets/Imagenes/gatito.png'},
+    {codigo:2, nombre:'Gato3', imagen:'assets/Imagenes/gato3.png'},
+    {codigo:3, nombre:'Gato4', imagen:'assets/Imagenes/gato3.png'},
+    {codigo:4, nombre:'Gato5', imagen:'assets/Imagenes/gatito.png'},
+    {codigo:5, nombre:'Gato6', imagen:'assets/Imagenes/gato3.png'}
   ]
 
 

@@ -8,15 +8,15 @@
         <div class="product-item">
             <div class="product-item-content">
                 <div class="p-mb-3">
-                    <img src={{product.photo}} width="400" height="450" alt="{{product.nombre}}" />
+                    <img src={{product.imagen}} width="400" height="450" alt="{{product.nombre}}" />
                     
                 </div>
                 <div class="p-mb-3">
                     <h4 class="p-mb-1">{{product.nombre}}</h4>
                     
-                    <h6 class="p-mt-0 p-mb-3">{{"Nombre" | translate}}:   {{product.nombre}}</h6>
-                    <h6 class="p-mt-0 p-mb-3">{{"Descripcion:" | translate}}   {{product.descripcion}}</h6>
-                    <h6 class="p-mt-0 p-mb-3">{{"Precio" | translate}}:   {{product.precio}}</h6>
+                    <h6 class="p-mt-0 p-mb-3">{{"Autor:" | translate}}    {{product.codigo}}</h6>
+                    <h6 class="p-mt-0 p-mb-3">{{"Descipcion:" | translate}}   {{product.imagen}}</h6>
+                    <h6 class="p-mt-0 p-mb-3">{{"Fecha:" | translate}}   {{product.nombre}}</h6>
                     <button class="btn btn-primary" (click)="comprar(product)">{{"Comprar" | translate}} </button>
                 </div>
             </div>
@@ -36,10 +36,10 @@
     <li *ngFor="let imagen of g" class="lista">
 
         <div class="card" style="width: 18rem;">
-            <img src={{imagen.photo}} class="card-img-top" width="18rem" height="300" alt={{imagen.nombre}}>
+            <img src={{imagen.imagen}} class="card-img-top" width="18rem" height="300" alt={{imagen.nombre}}>
             <div class="card-body">
               <h5 class="card-title">{{imagen.nombre}}</h5>
-              <p class="card-text">{{imagen.descripcion}}</p>
+              <p class="card-text">{{imagen.imagen}}</p>
               <button class="btn btn-primary" (click)="comprar(imagen)">{{"Comprar" | translate}} </button>
             </div>
           </div>
