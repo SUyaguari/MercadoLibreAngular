@@ -58,7 +58,7 @@ guardar(){
     console.log(data)
   })
 
-
+  this.route.navigate(['principal']);
 
 }
 
