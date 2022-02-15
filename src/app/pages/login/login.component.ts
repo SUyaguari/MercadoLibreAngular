@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   contactos : any;
   
-  c: Contactows = new Contactows();
+  c: any;
 
   constructor(private contactoService: ContactowsService ) { }
 
@@ -30,14 +30,13 @@ export class LoginComponent implements OnInit {
   cargarClientes(){
   console.log(this.contactoService.getDatos(this.contacto));
 
- this.contactoService.getDatos(this.contacto).subscribe({next: contacto => this.c.cedula = contacto.cedula,
-  error: err => console.error(err),
-  complete: () => console.info('Listo')});
+  this.contactoService.getDatos(this.contacto).subscribe((res: any[]) => this.c = res);
+
 
 
   // this.c = this.contactoService.getDatos(this.contacto);
    console.log("-------------");
-    console.log(this.c.cedula);
+    console.log(this.c);
     console.log("-------------");
 
    //this.contactos = this.contactoService.getClientes();
