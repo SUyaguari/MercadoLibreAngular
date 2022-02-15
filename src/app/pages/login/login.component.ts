@@ -19,26 +19,30 @@ export class LoginComponent implements OnInit {
 
   contactos : any;
   
+  c: Contactows = new Contactows();
 
   constructor(private contactoService: ContactowsService ) { }
 
   ngOnInit(): void {
 
-   this.cargarClientes();
-
-
   }
 
   cargarClientes(){
-    this.contactos = this.contactoService.getClientes();
+  console.log(this.contactoService.getDatos(this.contacto));
 
-    console.log(this.contactos);
-    console.log("Antes del fort");
-    console.log(this.contactoService.getClientes());
-    console.log( this.contactos = this.contactoService.getClientes());
-   
-    console.log(this.datos);
+ this.contactoService.getDatos(this.contacto).subscribe(contacto => this.c = contacto);
 
+
+  // this.c = this.contactoService.getDatos(this.contacto);
+   console.log("-------------");
+    console.log(this.c);
+    console.log("-------------");
+   console.log(this.datos.cedula);
+   console.log("-------------");
+   console.log(this.datos.correo);
+   //this.contactos = this.contactoService.getClientes();
+   this.contactos = this.contactoService.getDatos;
+   console.log(this.contactos);
     /*
 /*
     this.contactos = this.contactoService.getClientes();

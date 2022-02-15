@@ -4,12 +4,12 @@
 
       <label for="txtTexto">{{"Correo" | translate}}</label>
       <input type="text"  
-      id="txtEmail" name="txtEmail" type="email"  [(ngModel)]="datos.correo" autofocus/>
+      id="txtEmail" name="txtEmail" type="email"  [(ngModel)]="contacto.correo"/>
       <i class="fa fa-user"></i>
 
       <label for="txtTexto">{{"Cedula" | translate}}</label>
       <input type="text"  
-      id="txtNombre" name="txtNombre"  type="text"  [(ngModel)]="datos.cedula" autofocus/>
+      id="txtNombre" name="txtNombre"  type="text"  [(ngModel)]="contacto.cedula"/>
       <i class="fa fa-user"></i>
 
       <button (click)="cargarClientes()">{{ "iniciarSesion" | translate}}</button>

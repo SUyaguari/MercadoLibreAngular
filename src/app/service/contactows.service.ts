@@ -19,6 +19,14 @@ export class ContactowsService {
       return this.http.post<any>(url, contacto);
     }
 
+    getDatos(contacto: Contactows) {
+
+    let url = "http://localhost:8080/proyectoFinal/ws/clientes/login?correo="+contacto.correo+"&cedula="+contacto.cedula 
+
+    //  let url = "http://localhost:8080/proyectoFinal/ws/clientes/login?correo={contacto.correo}&cedula={contacto.cedula}"
+      return this.http.get<any>(url);
+    }
+   
 
     
 }
