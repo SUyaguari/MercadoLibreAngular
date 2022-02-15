@@ -61,7 +61,7 @@ export class PrincipalComponent implements OnInit {
 
   llenar(){
 
-    this.g = this.productoService.getProducto();
+    this.productoService.getProducto().subscribe((res: any[]) => this.g = res);
 
   }
 

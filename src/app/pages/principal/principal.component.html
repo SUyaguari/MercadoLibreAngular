@@ -1,57 +1,84 @@
+<head>
+    <title>Menu Desplegable</title>
+    <style type="text/css">
+        
+        * {
+            margin:px;
+            padding:0px;
+        }
+        
+        #header {
+            margin:left;
+            width:500px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        
+        ul, ol {
+            list-style:none;
+        }
+        
+        .nav > li {
+            float:left;
+        }
+        
+        .nav li a {
+            background-color:#000;
+            color:#fff;
+            text-decoration:none;
+            padding:10px 12px;
+            display:block;
+        }
+        
+        .nav li a:hover {
+            background-color:#434343;
+        }
+        
+        .nav li ul {
+            display:none;
+            position:left;
+            min-width:140px;
+        }
+        
+        .nav li:hover > ul {
+            display:block;
+        }
+        
+        .nav li ul li {
+            position:left;
+        }
+        
+        .nav li ul li ul {
+            right:40px;
+            top:0px;
+        }
+        
+    </style>
+    
+  </head>
+    
+    <body>
+        <div id="header">
+			<ul class="nav">
+		
+				<li><a href="principal">Mi primer ChatBot</a>
+					<ul>
+						<a href="principal">¿Quieres ver nuestros productos?</a>
+						<a href="crearProducto">¿Quieres agregar un producto?</a>
+						<a href="formulario">¿Deseas enviarnos un Formulario?</a>
+                        <a href="registro">¿Quieres registrate?</a>
+                        <a href="login">¿Estas Registrado? Logueate!!</a>
+						
+						
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+    </body>
+<br>
 <h2>{{"Mercado" | translate}} </h2>
 <p>{{"productos segun sun necesidad" | translate}} </p >
 <br>
-
-<head>
-    <title>Barra de navegación horizontal con listas y estilos CSS</title>
-    
-    <style type="text/css">
-    #navegador ul{
-       list-style-type: none;
-       text-align: right;
-    }
-    #navegador li{
-       display: inline;
-       text-align: right;
-       margin: 0 10px 0 0;
-    }
-    #navegador li a {
-       padding: 2px 7px 2px 7px;
-       color: #666;
-       background-color: #eeeeee;
-       border: 1px solid #ccc;
-       text-decoration: none;
-    }
-    #navegador li a:hover{
-       background-color: #333333;
-       color: #ffffff;
-    }
-       </style>
-    </head>
-    
-    <body>
-    
-    
-    <div id="navegador">
-    <ul>
-    <h6>Mi Primer Chat bot</h6>
-    <hr>
-    
-   <!-- <li><a href="formulario"img src="Imagenes/admin.png" height ="40" width="40">Formulario</a></li>-->
-    <li><a  href="login" type ="button"> Logueame</a></li>
-    
-    <a href="login"><img 
-    src="https://cdn5.vectorstock.com/i/1000x1000/33/09/login-icon-in-trendy-flat-style-vector-20053309.jpg" height ="40" width="40"alt="Logueame"></a>
-    
-    <li><a href="#">Elemento 2</a></li>
-    <li><a href="#">Elemento 3</a></li>
-    <li><a href="#">Elemento 4</a></li>
-    <hr>
-    </ul>
-    </div>
-    
-    </body>
-
 <br>
 <p-carousel [value]="g" [numVisible]="3" [numScroll]="3" [circular]="false" [autoplayInterval]="3000"  [responsiveOptions]="responsiveOptions">
     <ng-template pTemplate="header">
