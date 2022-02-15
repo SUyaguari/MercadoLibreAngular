@@ -30,19 +30,19 @@ export class LoginComponent implements OnInit {
   cargarClientes(){
   console.log(this.contactoService.getDatos(this.contacto));
 
- this.contactoService.getDatos(this.contacto).subscribe(contacto => this.c = contacto);
+ this.contactoService.getDatos(this.contacto).subscribe({next: contacto => this.c.cedula = contacto.cedula,
+  error: err => console.error(err),
+  complete: () => console.info('Listo')});
 
 
   // this.c = this.contactoService.getDatos(this.contacto);
    console.log("-------------");
-    console.log(this.c);
+    console.log(this.c.cedula);
     console.log("-------------");
-   console.log(this.datos.cedula);
-   console.log("-------------");
-   console.log(this.datos.correo);
+
    //this.contactos = this.contactoService.getClientes();
-   this.contactos = this.contactoService.getDatos;
-   console.log(this.contactos);
+   console.log("tuptamadre")
+  // console.log(this.contactos);
     /*
 /*
     this.contactos = this.contactoService.getClientes();

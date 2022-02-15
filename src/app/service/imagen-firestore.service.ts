@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { Observable } from 'rxjs';
-import { crearproducto } from '../domain/crearproducto';
+import { Crearproducto } from '../domain/crearproducto';
 
 
 @Injectable({
@@ -14,7 +14,7 @@ export class ImagenFirestoreService {
 
   }
 
-  save(imagen: crearproducto){
+  save(imagen: Crearproducto){
     const refImagen = this.afs.collection("baseGaleria");
 
     console.log("guardado", imagen);

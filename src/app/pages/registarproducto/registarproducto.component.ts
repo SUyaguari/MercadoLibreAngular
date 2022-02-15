@@ -4,7 +4,8 @@ import firebase from 'firebase/compat/app' ;
 import "firebase/compat/storage";
 import "firebase/compat/firestore" ;
 import { Router } from '@angular/router';
-import { crearproducto } from 'src/app/domain/crearproducto';
+import { Crearproducto } from 'src/app/domain/crearproducto';
+import { ProductosServicioService } from 'src/app/service/productos-servicio.service';
 
 
 
@@ -15,11 +16,12 @@ import { crearproducto } from 'src/app/domain/crearproducto';
 })
 export class RegistarproductoComponent implements OnInit {
 
-  form: crearproducto = new crearproducto();
+  form: Crearproducto = new Crearproducto();
 
   enlace: any;
 
-  constructor(private imagenService: ImagenFirestoreService, private route: Router) { }
+  constructor(private imagenService: ImagenFirestoreService, private route: Router,
+              private servicioProducto: ProductosServicioService) { }
 
   ngOnInit(): void {
     
@@ -47,6 +49,9 @@ const archivoPath = storageRef.child(archivo.name);
 guardar(){
   console.log("Hola", this.form);
   //this.imagenService.save(this.galeria);
+  console.log(this.form)
+  console.log("ya")
+  console.log(this.servicioProducto.guardar(this.form));
   
 }
 

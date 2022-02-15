@@ -1,4 +1,4 @@
-export class crearproducto{
+export class Crearproducto{
 
     codigo: string ="";
     nombre: string ="";
@@ -6,8 +6,5 @@ export class crearproducto{
     descripcion: string ="";
     cantidad : string ="";
     photo: string ="";
-
-
-
 
 }
