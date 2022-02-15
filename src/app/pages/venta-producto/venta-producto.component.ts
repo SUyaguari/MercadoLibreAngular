@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { autentificacion } from 'src/app/domain/singleton';
 import { ventas } from 'src/app/domain/ventas';
 import { VentasServiceService } from 'src/app/service/ventas-service.service';
@@ -54,23 +54,33 @@ export class VentaProductoComponent implements OnInit {
     }
   }
 
-  usuario(){
+  usuario(parametro : string){
 
-    this.router.navigate(['perfil']);
+    let params: NavigationExtras = {
+      queryParams: {
+        string: parametro
+      }
+    }
+    
+    this.router.navigate(['perfil'], params);
 
   }
 
   guardar(){
-    this.v.codigo=0;
-    this.v.codigoProducto=this.prod.codigo;
-    this.v.cantidad = this.cont;
-    this.v.total = this.total;
-    this.v.comprador =this.per.cedula;
-    this.v.vendedor ='000000000';
-    this.servicioVentas.guardar(this.v).subscribe(data => {
-      console.log(data);
-    });
-    this.router.navigate(['principal']);
+    if(this.per!=null){
+      this.v.codigo=0;
+      this.v.codigoProducto=this.prod.codigo;
+      this.v.cantidad = this.cont;
+      this.v.total = this.total;
+      this.v.comprador =this.per.cedula;
+      this.v.vendedor ='000000000';
+      this.servicioVentas.guardar(this.v).subscribe(data => {
+        console.log(data);
+      });
+      this.router.navigate(['principal']);
+    }else{
+      this.router.navigate(['login'])
+    }
   }
 
 }

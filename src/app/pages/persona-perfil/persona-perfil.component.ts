@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { autentificacion } from 'src/app/domain/singleton';
 
 @Component({
@@ -9,12 +9,27 @@ import { autentificacion } from 'src/app/domain/singleton';
 })
 export class PersonaPerfilComponent implements OnInit {
 
-  constructor(private router: Router, private aut : autentificacion ) { }
-
   per : any;
+
+  constructor(private router: Router, private aut : autentificacion, private route: ActivatedRoute,  ) { 
+
+    this.route.queryParams.subscribe(params =>{
+      console.log(params);
+    
+      if(this.router.getCurrentNavigation()?.extras.queryParams){
+        let usu = this.router.getCurrentNavigation()?.extras.queryParams?.producto;
+        console.log(usu)
+        
+      }
+    })
+  }
+
+  
 
   ngOnInit(): void {
     this.per = this.aut.getUsuario();
+
+
   }
 
   regresar(){

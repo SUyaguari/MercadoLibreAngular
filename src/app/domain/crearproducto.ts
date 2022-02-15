@@ -6,5 +6,6 @@ export class Crearproducto{
     descripcion: string ="";
     cantidad : string ="";
     photo: string ="";
+    cedula: string =""
 
 }
